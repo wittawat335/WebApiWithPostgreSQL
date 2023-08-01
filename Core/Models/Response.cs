@@ -8,14 +8,14 @@ namespace Core.Models
 {
     public class Response
     {
-        public bool Status { get; set; }
-        public string? Message { get; set; }
+        public bool Status { get; set; } = false;
+        public string Message { get; set; } = string.Empty;
     }
 
     public class Response<T>
     {
         public T? Value { get; set; }
-        public bool Status { get; set; }
-        public string? Message { get; set; }
-    }
+        public bool Status { get; set; } = false;
+        public string? Message { get; set; } 
+   }
 }
