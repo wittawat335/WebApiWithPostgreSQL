@@ -19,5 +19,10 @@ namespace Infrastructure
                 options.UseNpgsql(configuration.GetConnectionString("PostgreSQl"));
             });
         }
+
+        public static void RegisterRepository(this IServiceCollection services)
+        {
+
+        }
     }
 }
