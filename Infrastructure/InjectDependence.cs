@@ -1,4 +1,6 @@
-﻿using Infrastructure.DBContext;
+﻿using Core.Domain.RepositoryContracts;
+using Infrastructure.DBContext;
+using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,7 +19,7 @@ namespace Infrastructure
 
         public static void RegisterRepository(this IServiceCollection services)
         {
-
+            services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         }
     }
 }

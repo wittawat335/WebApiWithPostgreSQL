@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Core.Services;
+using Core.Services.Contracts;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Core
 {
@@ -6,7 +8,7 @@ namespace Core
     {
         public static void RegisterServices(this IServiceCollection services)
         {
-            
+            services.AddScoped<IAddressService, AddressService>();
         }
     }
 }
